@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "dexonline",
+  "version": "0.1.0",
+  "permissions": ["tabs", "storage", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
